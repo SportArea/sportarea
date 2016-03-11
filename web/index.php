@@ -9,7 +9,5 @@ header('Content-Type: text/html; charset=utf-8');
 require_once './config.app.php';
 require_once ROOT .'/vendor/autoload.php';
 
-/**
- * Router
- */
+// Router
 new \SportArea\Core\Router();
