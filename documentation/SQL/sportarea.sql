@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 
 INSERT INTO `settings` (`id`, `setting`, `title`, `description`, `type`, `possible_values`, `value`, `category_id`, `account_id`) VALUES
 (1, 'environment', 'Environment', NULL, 'enum', '{"development":"Development","staging":"Staging","production":"Production"}', 'development', 1, NULL),
-(2, 'email_address', 'Email adresa', NULL, 'string', '', 'ion.jula@lifeishard.ro', 1, NULL),
+(2, 'email_address', 'Email adresa', NULL, 'string', '', 'hegedus.norbert@yahoo.ro', 1, NULL),
 (3, 'email_name', 'Email nume', NULL, 'string', '', 'Ion Jula', 1, NULL),
 (4, 'remember_cookie_lifetime', 'Durata cookie logare', 'Durata de viata a cookie-ului de logare automata.', 'enum', '{"60":"1 Minut","3600":"1 Ora","21600":"6 Ore","43200":"12 Ore","86400":"1 Zi","172800":"2 Zile","259200":"3 Zile"}', '60', 1, NULL),
 (5, 'results_per_page', 'Numar rezultate per pagina', 'Numarul de rezultate (utilizatori, clienti, etc) afisati per pagina', 'enum', '{"15":"15 rezultate","25":"25 rezultate","50":"50 rezultate","100":"100 rezultate"}', '15', 1, NULL),
