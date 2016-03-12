@@ -13,7 +13,8 @@
 
 $routes                     =   array();
 
-$routes['logare']           =   'index/login';
-$routes['inregistrare']     =   'front/signUp';
-$routes['parola']           =   'index/forgotPassword';
-$routes['resetare_parola']  =   'index/resetPassword';
+$routes = array();
+
+$routes['admin']        = 'AdminAuthentication/login';
+$routes['admin/login']  = 'AdminAuthentication/login';
+$routes['admin/logout'] = 'AdminAuthentication/logout';
