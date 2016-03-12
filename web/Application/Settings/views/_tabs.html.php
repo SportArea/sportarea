@@ -13,14 +13,14 @@
         </li>
     <?php endif;?>
 
-    <?php if(!array_intersect(array('Superadmin'), $loggedUser['roles']) && array_intersect(array('users'), $loggedUser['modules']) && $loggedUser['account_type'] == \Application\Accounts\AccountsModel::TYPE_LAW_FIRM):?>
+    <?php if(!array_intersect(array('Superadmin'), $loggedUser['roles']) && array_intersect(array('users'), $loggedUser['modules']) && $loggedUser['account_type'] == \Application\Roles\RolesModel::ROLE_SUPERADMIN):?>
         <!-- Utilizatori -->
         <li class="<?php echo (isset($template['method']) && isset($template['module']) && in_array($template['module'], array('users'))) ? 'active' : null ?>">
             <a href="<?php echo BASE_URL?>/users/index">Utilizatori</a>
         </li>
     <?php endif;?>
 
-    <?php if(!array_intersect(array('Superadmin'), $loggedUser['roles']) && array_intersect(array('settings'), $loggedUser['modules']) && $loggedUser['account_type'] == \Application\Accounts\AccountsModel::TYPE_LAW_FIRM):?>
+    <?php if(!array_intersect(array('Superadmin'), $loggedUser['roles']) && array_intersect(array('settings'), $loggedUser['modules']) && $loggedUser['account_type'] == \Application\Roles\RolesModel::ROLE_SUPERADMIN):?>
         <!-- Roles / Roluri -->
         <li class="<?php echo (isset($template['method']) && $template['method'] == 'roles') ? 'active' : null ?>">
             <a href="<?php echo BASE_URL?>/roles/roles">Roluri</a>
