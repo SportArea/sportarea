@@ -6,9 +6,6 @@ namespace Application\Settings;
 use SportArea\Core\Access;
 use SportArea\Core\Uim;
 
-// Application
-use Application\SettingsCategories\SettingsCategoriesModel;
-
 class SettingsController extends Access
 {
     protected $module = 'settings';
