@@ -1,1 +1,2 @@
-# sportarea
+# sportarea.ro
+# sports booking application
