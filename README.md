@@ -1,2 +1,2 @@
 # sportarea.ro
-# sports booking application
+# A sport booking application
