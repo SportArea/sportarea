@@ -1,0 +1,31 @@
+.events-widget::after {
+    clear: both;
+}
+.events-widget .event-list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.events-widget .event-list > li {
+    border-bottom: 1px solid #f4f6f9;
+    padding: 10px 0;
+    position: relative;
+}
+.events-widget .event-list > li:hover {
+    background: none repeat scroll 0 0 #f4f6f9;
+    cursor: pointer;
+}
+.events-widget .event-list > li:last-of-type {
+    border-bottom: medium none;
+}
+.events-widget .event-list .event-period {
+    color:#43B6AE;
+    padding-right:30px;
+}
+.events-widget .event-list .event-title {
+    color:#8691A3;
+}
+
+.dashboard-stat:hover {
+    cursor: pointer;
+}
