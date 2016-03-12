@@ -72,6 +72,13 @@ class Router
         $tmpUrlParsed = parse_url($tmpUrl);
         $url = $tmpUrlParsed['path'];
 
+
+        if (strlen($url) && count($this->routes) != 0) {
+            if (array_key_exists($url, $this->routes)) {
+                return $this->parseUrl($this->routes[$url]);
+            }
+        }
+
         // we explode the parts by "/"
 		//$parts = array_filter(explode("/", $url));
         $parts = explode("/", $url);
