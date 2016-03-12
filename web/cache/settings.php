@@ -1,0 +1,22 @@
+<?php
+
+
+
+/**
+
+	FISIER GENERAT AUTOMAT ATUNCI CAND SE SALVEAZA SETARILE DIN APLICATIE 
+
+	A NU SE MODIFICA MANUAL
+
+**/
+
+
+
+
+
+define('SETTINGS_ENVIRONMENT', 'development');
+define('SETTINGS_EMAIL_ADDRESS', 'hegedus.norbert@yahoo.ro');
+define('SETTINGS_EMAIL_NAME', 'Hegedus Norbert');
+define('SETTINGS_REMEMBER_COOKIE_LIFETIME', '60');
+define('SETTINGS_RESULTS_PER_PAGE', '15');
+define('SETTINGS_VAT', '24');
