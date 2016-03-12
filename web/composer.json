@@ -1,0 +1,8 @@
+{
+  "config": {
+    "vendor-dir": "vendor_composer"
+  },
+  "require": {
+    "robmorgan/phinx": "*"
+  }
+}
