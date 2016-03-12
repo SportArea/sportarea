@@ -371,7 +371,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_salt` (`salt`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=87 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `users`
@@ -379,15 +379,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `salt`, `status`, `deleted`) VALUES
 (1, 'Super', 'Admin', 'superadmin@sample.com', '8158b68d28c389a3fd2d0c561f2f0eb57ede086f', 'jtoxHSRBYsK1ZiugDIAT', 'active', 0),
-(2, 'Logan', 'Joel', 'cabinet@sample.com', '9f9bbfe770597d715e0fd56c9b0b1ae503638643', 'dU5oX8mX8tQ7dM7rK4yX4eK2', 'active', 0),
-(3, 'Quinton', 'Jackie', 'avocat@sample.com', '87d5da1b3ac33f4ddd2d15521d6d0cf071fd0e80', 'rX5rH2sA7eQ2uU2mD2zF6nF1', 'active', 0),
-(4, 'Samora', 'LippsMaura', 'stagiar@sample.com', '21b6292777a573b1156ce784222d58d8a172ca43', 'nK5hT1cN3aH7aH0pP2zR1xB3', 'active', 0),
-(5, 'Meinke', 'Reena', 'sample4@example.com', '45530cb5b668c3624044221e58995eac56195871', 'eF3jA7cK1tI3zF8iJ6nM5xX6', 'pending', 0),
-(6, 'Sean', 'Jackie', 'sample5@example.com', 'e8795a18bea69e10784c600aeec1021a06605113', 'eC1rJ9zU8pP9iG8wR6tG8xB2', 'active', 1),
-(7, 'Leboeuf', 'Quincy', 'sample6@example.com', '2b33e44b1f716f6819a67801c8aee5573e18be77', 'oP2gS2tP6kH7fU8sD9mM5pL9', 'active', 0),
-(8, 'JorgensonLan', 'Reena', 'sample7@example.com', 'f30aee713da70655c36e1f621d483ab37ab20567', 'eW1aG9zF8dC7pU2gL5hQ0hU8', 'active', 0),
-(9, 'Quincy', 'Rundle', 'sample8@example.com', '18e6c3afd19c52006d4bcc2846b0f30902783cc5', 'fN4jU1oB6yT7cH0eP5zZ1kJ5', 'active', 1),
-(10, 'Veola', 'Jackie', 'sample9@example.com', '78c35d99a420ec30dff636226a1e35beec216bc1', 'sS5kN3oX4sQ5zD1rU1sH2fR6', 'suspended', 0),
 
 -- --------------------------------------------------------
 
