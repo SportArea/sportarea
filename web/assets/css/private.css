@@ -1,0 +1,322 @@
+.logo-default {
+    width: 100px;
+}
+
+.portlet.light > .portlet-title > .caption {
+    height: 50px;
+}
+
+.portlet.light.bordered {
+    padding-bottom: 5px;
+}
+
+.portlet.light .form .form-actions {
+    padding-bottom: 10px !important;
+}
+
+.actions .blue-madison {
+    border: solid #578ebe 1px;
+}
+.actions .blue-madison:hover {
+    background-color: #4B77BE;
+}
+
+.likeATab {
+    margin-left: -11px;
+}
+
+.likeATab span {
+    border-top: solid 2px #F3565D;
+}
+
+
+.custom-table-list .fa {
+    width: 12px !important;
+}
+
+.custom-table-list td span:last-child > a.btn,
+.custom-table-list td span:last-child > a.btn:hover {
+    margin-right: 0px;
+}
+
+.iframe-modal-content .modal-body {
+    padding-bottom: 0px;
+}
+
+.iframe-modal-content .form-group {
+    margin-bottom: 5px;
+}
+
+.iframe-modal-content .form-group .radio-list label:not(:first-child),
+.iframe-modal-content .form-group .checkbox-list label:not(:first-child){
+    padding-top: 0px;
+}
+
+.modal-body.form {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.modal-body.form .col-md-3 {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.modal-body.form .col-md-12:not(:first-child) {
+    padding-top: 15px;
+}
+
+.modal-body p {
+    white-space: normal;
+}
+
+.datepicker {
+    cursor: alias !important;
+    background-color: #FFFFFF !important;
+}
+
+.validate .input-icon i.fa.right {
+    bottom: 5px;
+    padding-top: 3px;
+}
+
+.validate .input-icon i.fa.right {
+    right: 8px;
+}
+
+.validate .input-icon i.fa.fa-warning {
+    color: #f3565d;
+}
+
+.validate .input-icon i.fa.fa-exclamation {
+    color: #DFBA49;
+}
+
+.validate .input-icon i.fa.fa-warning.disabled {
+    color: #DDDDDD;
+}
+
+.validate .form-group .input-group .input-icon i.fa {
+    top: -2px !important;
+}
+
+#toast-container, #toast-container .toast {
+    width: 500px;
+}
+
+#toast-container > div {
+    opacity:1;
+}
+
+/**
+ *   table-turquoise    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ */
+
+.dataTable.table-turquoise thead th,
+.dataTable.table-turquoise thead th.sorting,
+.dataTable.table-turquoise thead th.sorting_asc,
+.dataTable.table-turquoise thead th.sorting_desc {
+    background-color: #1BBC9B;
+    color: #FFFFFF;
+}
+
+.dataTable.table-turquoise thead th.sorting {
+    background-image: url('../img/icons/sort_both.png');
+    background-repeat: no-repeat;
+}
+
+.dataTable.table-turquoise thead th.sorting_asc {
+    background-image: url('../img/icons/sort_asc.png');
+    background-repeat: no-repeat;
+}
+
+.dataTable.table-turquoise thead th.sorting_desc {
+    background-image: url('../img/icons/sort_desc.png');
+    background-repeat: no-repeat;
+}
+
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) {
+    white-space: nowrap;
+}
+
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) a,
+.lite-icon a,
+.lite-icon a:active {
+    color: #5B9BD4;
+    padding: 0 3px;
+    text-decoration: none;
+}
+
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) a:hover,
+.lite-icon a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) a.disabled,
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) a.disabled:hover,
+.lite-icon a.disabled,
+.lite-icon a.disabled:hover {
+    color: #CAC9C9;
+    cursor: not-allowed;
+}
+
+.dataTable.table-turquoise tbody tr td:first-child:not(.dropDownMenu) a.red,
+.lite-icon a.red {
+    color: #CB1632;
+}
+
+.dataTable.table-turquoise button.dropdown-toggle {
+    height: 18px;
+    padding: 0 3px;
+}
+
+/**
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ */
+
+td.dropDownMenu .dropdown-toggle .dropdown-menu:before,
+td.dropDownMenu .btn-group .dropdown-menu:before {
+    position: absolute;
+    top: -8px;
+    right: 9px;
+    display: inline-block !important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #e0e0e0;
+    border-left: 8px solid transparent;
+    content: '';
+    margin-right: 146px;
+}
+
+td.dropDownMenu .dropdown-toggle .dropdown-menu:after,
+td.dropDownMenu .btn-group .dropdown-menu:after {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    display: inline-block !important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent;
+    content: '';
+    margin-right: 146px;
+}
+
+/**
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ */
+
+#search {
+    padding: 15px;
+}
+
+#search table {
+    width: 100%;
+}
+
+#search table tr:not(:first-child) td {
+    padding-top: 15px;
+}
+
+#search table td {
+    width: 25%;
+}
+
+#search table td input,
+#search table td select {
+    width: 90%;
+}
+
+#search table th {
+    width: 1px;
+    white-space: nowrap;
+    text-align: right;
+    font-weight: normal;
+}
+
+#search table th button[type=submit] {
+    background-color: #578EBE;
+}
+
+#search table th button[type=submit]:hover {
+    background-color: #4B77BE;
+}
+
+
+#search table th button[type=button] {
+    background-color: #95A5A6;
+}
+
+#search table th button[type=button]:hover {
+    background-color: #829596;
+}
+
+#search table th button[type=submit] i,
+#search table th button[type=button] i {
+    color: #FFFFFF;
+}
+
+// DEPRECATED?
+#search .col-md-1,
+#search .col-md-3,
+#search .col-md-6,
+#search .col-md-11 {
+    position: static !important;
+    z-index: 0;
+}
+
+/**
+ * - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ */
+
+.contracts-add-edit-fee {
+    margin-top: -7px;
+}
+
+.contracts-add-edit-fee#fee-subtype-fixed {
+    display: none;
+}
+
+.contracts-add-edit-fee .radio-inline > label {
+    white-space: nowrap;
+}
+
+.contracts-add-edit-fee .radio-inline > span {
+    position: relative;
+    top: 7px;
+    white-space: nowrap;
+}
+
+.contracts-add-edit-fee tr td:first-child label:first-child {
+    padding-left: 0px;
+}
+
+#modal-add-existent-client .select2-container.select2-container-multi.form-control.select2-dropdown-open,
+#modal-add-existent-client .select2-container.select2-container-multi.form-control {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.form-body-modal .form-group {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-body-modal .form-group label {
+    padding-top: 8px;
+    white-space: nowrap;
+}
+
+.form-body-modal .form-group .control-label {
+    text-align: right;
+    float: left;
+    width: 130px;
+}
+
+.form-body-modal .form-group .col-md-4 {
+    width: 55%;
+    float: left;
+}

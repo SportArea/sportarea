@@ -1,20 +1,33 @@
 var TableManaged = function () {
 
-    var initClientList = function () {
+    var initTable1 = function () {
 
-        var table = $('#clients_list');
+        var table = $('#sample_1');
 
         // begin first table
         table.dataTable({
+            "columns": [{
+                "orderable": false
+            }, {
+                "orderable": true
+            }, {
+                "orderable": false
+            }, {
+                "orderable": false
+            }, {
+                "orderable": true
+            }, {
+                "orderable": false
+            }],
             "lengthMenu": [
                 [5, 15, 20, -1],
                 [5, 15, 20, "All"] // change per page values here
             ],
             // set the initial value
-            "pageLength": 15,            
+            "pageLength": 5,            
             "pagingType": "bootstrap_full_number",
             "language": {
-                "lengthMenu": "  _MENU_ clienti pe pagina",
+                "lengthMenu": "  _MENU_ records",
                 "paginate": {
                     "previous":"Prev",
                     "next": "Next",
@@ -34,8 +47,26 @@ var TableManaged = function () {
             ] // set first column as a default sort by asc
         });
 
-        var tableWrapper = jQuery('#clients_list_wrapper');
+        var tableWrapper = jQuery('#sample_1_wrapper');
 
+        table.find('.group-checkable').change(function () {
+            var set = jQuery(this).attr("data-set");
+            var checked = jQuery(this).is(":checked");
+            jQuery(set).each(function () {
+                if (checked) {
+                    $(this).attr("checked", true);
+                    $(this).parents('tr').addClass("active");
+                } else {
+                    $(this).attr("checked", false);
+                    $(this).parents('tr').removeClass("active");
+                }
+            });
+            jQuery.uniform.update(set);
+        });
+
+        table.on('change', 'tbody tr .checkboxes', function () {
+            $(this).parents('tr').toggleClass("active");
+        });
 
         tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
     }
@@ -141,9 +172,9 @@ var TableManaged = function () {
                 return;
             }
 
-            initClientList();
-            // initTable2();
-            // initTable3();
+            initTable1();
+            initTable2();
+            initTable3();
         }
 
     };

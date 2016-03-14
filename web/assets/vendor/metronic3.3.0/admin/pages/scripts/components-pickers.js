@@ -60,7 +60,7 @@ var ComponentsPickers = function () {
             function (start, end) {
                 $('#defaultrange input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
-        );
+        );        
 
         $('#defaultrange_modal').daterangepicker({
                 opens: (Metronic.isRTL() ? 'left' : 'right'),
@@ -74,7 +74,7 @@ var ComponentsPickers = function () {
             function (start, end) {
                 $('#defaultrange_modal input').val(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
             }
-        );
+        );  
 
         // this is very important fix when daterangepicker is used in modal. in modal when daterange picker is opened and mouse clicked anywhere bootstrap modal removes the modal-open class from the body element.
         // so the below code will fix this issue.
@@ -202,7 +202,7 @@ var ComponentsPickers = function () {
         });
         $('.colorpicker-rgba').colorpicker();
     }
-
+   
 
     return {
         //main function to initiate the module

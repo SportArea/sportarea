@@ -1,0 +1,39 @@
+/**
+ * Login
+ */
+.login .content .login-form.sign-up {
+    width: 470px;
+}
+
+.login .content.sign-up .form-actions {
+    border-bottom: none;
+    height: 50px;
+}
+
+/**
+ * Sign UP
+ */
+.login .content.sign-up {
+    width: 610px;
+}
+
+.login .content.sign-up .form-control {
+    width: 248px;
+}
+
+.login .content.sign-up .select2me {
+    width: 250px !important;
+}
+
+/**
+ * Login + Sign UP
+ */
+.login .content.sign-up legend {
+    width: 230px;
+}
+
+.login .content.sign-up legend h6 {
+    color: #2B8B3A;
+    font-size: 14px;
+    font-weight: bold;
+}

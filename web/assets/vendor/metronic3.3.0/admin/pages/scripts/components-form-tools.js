@@ -15,13 +15,13 @@ var ComponentsFormTools = function () {
             { num: 'keenthemes team' }
           ]
         });
-
+         
         // initialize the bloodhound suggestion engine
         numbers.initialize();
-
+         
         // instantiate the typeahead UI
         if (Metronic.isRTL()) {
-          $('#typeahead_example_1').attr("dir", "rtl");
+          $('#typeahead_example_1').attr("dir", "rtl");  
         }
         $('#typeahead_example_1').typeahead(null, {
           displayKey: 'num',
@@ -29,6 +29,30 @@ var ComponentsFormTools = function () {
           source: numbers.ttAdapter()
         });
 
+        // Example #2
+        var countries = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.name); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          limit: 10,
+          prefetch: {
+            url: 'demo/typeahead_countries.json',
+            filter: function(list) {
+              return $.map(list, function(country) { return { name: country }; });
+            }
+          }
+        });
+ 
+        countries.initialize();
+         
+        if (Metronic.isRTL()) {
+          $('#typeahead_example_2').attr("dir", "rtl");  
+        } 
+        $('#typeahead_example_2').typeahead(null, {
+          name: 'typeahead_example_2',
+          displayKey: 'name',
+          hint: (Metronic.isRTL() ? false : true),
+          source: countries.ttAdapter()
+        });
 
         // Example #3
         var custom = new Bloodhound({
@@ -36,12 +60,12 @@ var ComponentsFormTools = function () {
           queryTokenizer: Bloodhound.tokenizers.whitespace,
           remote: 'demo/typeahead_custom.php?query=%QUERY'
         });
-
+         
         custom.initialize();
-
+         
         if (Metronic.isRTL()) {
-          $('#typeahead_example_3').attr("dir", "rtl");
-        }
+          $('#typeahead_example_3').attr("dir", "rtl");  
+        }  
         $('#typeahead_example_3').typeahead(null, {
           name: 'datypeahead_example_3',
           displayKey: 'name',
@@ -63,6 +87,48 @@ var ComponentsFormTools = function () {
             ].join(''))
           }
         });
+
+        // Example #4
+
+        var nba = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.team); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          prefetch: 'demo/typeahead_nba.json'
+        });
+         
+        var nhl = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.team); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          prefetch: 'demo/typeahead_nhl.json'
+        });
+         
+        nba.initialize();
+        nhl.initialize();
+         
+        if (Metronic.isRTL()) {
+          $('#typeahead_example_4').attr("dir", "rtl");  
+        }
+        $('#typeahead_example_4').typeahead({
+          hint: (Metronic.isRTL() ? false : true),
+          highlight: true
+        },
+        {
+          name: 'nba',
+          displayKey: 'team',
+          source: nba.ttAdapter(),
+          templates: {
+                header: '<h3>NBA Teams</h3>'
+          }
+        },
+        {
+          name: 'nhl',
+          displayKey: 'team',
+          source: nhl.ttAdapter(),
+          templates: {
+                header: '<h3>NHL Teams</h3>'
+          }
+        });
+
     }
 
     var handleTwitterTypeaheadModal = function() {
@@ -80,13 +146,13 @@ var ComponentsFormTools = function () {
             { num: 'keenthemes team' }
           ]
         });
-
+         
         // initialize the bloodhound suggestion engine
         numbers.initialize();
-
+         
         // instantiate the typeahead UI
         if (Metronic.isRTL()) {
-          $('#typeahead_example_modal_1').attr("dir", "rtl");
+          $('#typeahead_example_modal_1').attr("dir", "rtl");  
         }
         $('#typeahead_example_modal_1').typeahead(null, {
           displayKey: 'num',
@@ -94,6 +160,30 @@ var ComponentsFormTools = function () {
           source: numbers.ttAdapter()
         });
 
+        // Example #2
+        var countries = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.name); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          limit: 10,
+          prefetch: {
+            url: 'demo/typeahead_countries.json',
+            filter: function(list) {
+              return $.map(list, function(country) { return { name: country }; });
+            }
+          }
+        });
+ 
+        countries.initialize();
+         
+        if (Metronic.isRTL()) {
+          $('#typeahead_example_modal_2').attr("dir", "rtl");  
+        }
+        $('#typeahead_example_modal_2').typeahead(null, {
+          name: 'typeahead_example_modal_2',
+          displayKey: 'name',
+          hint: (Metronic.isRTL() ? false : true),
+          source: countries.ttAdapter()
+        });
 
         // Example #3
         var custom = new Bloodhound({
@@ -101,11 +191,11 @@ var ComponentsFormTools = function () {
           queryTokenizer: Bloodhound.tokenizers.whitespace,
           remote: 'demo/typeahead_custom.php?query=%QUERY'
         });
-
+         
         custom.initialize();
-
+         
         if (Metronic.isRTL()) {
-          $('#typeahead_example_modal_3').attr("dir", "rtl");
+          $('#typeahead_example_modal_3').attr("dir", "rtl");  
         }
         $('#typeahead_example_modal_3').typeahead(null, {
           name: 'datypeahead_example_modal_3',
@@ -128,6 +218,47 @@ var ComponentsFormTools = function () {
             ].join(''))
           }
         });
+
+        // Example #4
+
+        var nba = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.team); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          limit: 3,
+          prefetch: 'demo/typeahead_nba.json'
+        });
+         
+        var nhl = new Bloodhound({
+          datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.team); },
+          queryTokenizer: Bloodhound.tokenizers.whitespace,
+          limit: 3,
+          prefetch: 'demo/typeahead_nhl.json'
+        });
+         
+        nba.initialize();
+        nhl.initialize();
+         
+        $('#typeahead_example_modal_4').typeahead({
+            hint: (Metronic.isRTL() ? false : true),
+            highlight: true
+        },
+        {
+          name: 'nba',
+          displayKey: 'team',
+          source: nba.ttAdapter(),
+          templates: {
+                header: '<h3>NBA Teams</h3>'
+          }
+        },
+        {
+          name: 'nhl',
+          displayKey: 'team',
+          source: nhl.ttAdapter(),
+          templates: {
+                header: '<h3>NHL Teams</h3>'
+          }
+        });
+
     }
 
     var handleBootstrapSwitch = function() {
@@ -150,7 +281,7 @@ var ComponentsFormTools = function () {
 
     var handleBootstrapTouchSpin = function() {
 
-        $("#touchspin_demo1").TouchSpin({
+        $("#touchspin_demo1").TouchSpin({          
             buttondown_class: 'btn green',
             buttonup_class: 'btn green',
             min: -1000000000,
@@ -158,8 +289,8 @@ var ComponentsFormTools = function () {
             stepinterval: 50,
             maxboostedstep: 10000000,
             prefix: '$'
-        });
-
+        }); 
+        
         $("#touchspin_demo2").TouchSpin({
             buttondown_class: 'btn blue',
             buttonup_class: 'btn blue',
@@ -170,9 +301,9 @@ var ComponentsFormTools = function () {
             boostat: 5,
             maxboostedstep: 10,
             postfix: '%'
-        });
+        });         
 
-        $("#touchspin_demo3").TouchSpin({
+        $("#touchspin_demo3").TouchSpin({          
             buttondown_class: 'btn green',
             buttonup_class: 'btn green',
             prefix: "$",
@@ -184,7 +315,7 @@ var ComponentsFormTools = function () {
         $('#maxlength_defaultconfig').maxlength({
             limitReachedClass: "label label-danger",
         })
-
+    
         $('#maxlength_thresholdconfig').maxlength({
             limitReachedClass: "label label-danger",
             threshold: 20
@@ -218,7 +349,7 @@ var ComponentsFormTools = function () {
         $('#spinner3').spinner({value:0, min: 0, max: 10});
         $('#spinner4').spinner({value:0, step: 5, min: 0, max: 200});
     }
-
+    
     var handleTagsInput = function () {
         if (!jQuery().tagsInput) {
             return;
@@ -233,7 +364,7 @@ var ComponentsFormTools = function () {
             width: 300
         });
     }
-
+    
     var handleInputMasks = function () {
         $.extend($.inputmask.defaults, {
             'autounmask': true
@@ -241,7 +372,7 @@ var ComponentsFormTools = function () {
 
         $("#mask_date").inputmask("d/m/y", {
             autoUnmask: true
-        }); //direct mask
+        }); //direct mask        
         $("#mask_date1").inputmask("d/m/y", {
             "placeholder": "*"
         }); //change the placeholder
@@ -304,7 +435,7 @@ var ComponentsFormTools = function () {
                     return word.match(/[a-z].[0-9]/) && score;
                 }, 10, true);
 
-                // set as initialized
+                // set as initialized 
                 initialized = true;
             }
         });
@@ -328,7 +459,7 @@ var ComponentsFormTools = function () {
                 });
                 // add error class to the popover
                 pop.data('bs.popover').tip().addClass('error');
-                // set last poped popover to be closed on click(see Metronic.js => handlePopovers function)
+                // set last poped popover to be closed on click(see Metronic.js => handlePopovers function)     
                 Metronic.setLastPopedPopover(pop);
                 pop.popover('show');
                 e.stopPropagation(); // prevent closing the popover
