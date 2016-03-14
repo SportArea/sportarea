@@ -378,7 +378,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `salt`, `status`, `deleted`) VALUES
-(1, 'Super', 'Admin', 'superadmin@sample.com', '8158b68d28c389a3fd2d0c561f2f0eb57ede086f', 'jtoxHSRBYsK1ZiugDIAT', 'active', 0),
+(1, 'Super', 'Admin', 'superadmin@sample.com', '8158b68d28c389a3fd2d0c561f2f0eb57ede086f', 'jtoxHSRBYsK1ZiugDIAT', 'active', 0);
 
 -- --------------------------------------------------------
 
