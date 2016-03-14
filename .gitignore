@@ -1,0 +1,4 @@
+tools/vendor/*
+composer.lock
+deploy.ini
+git-deploy
