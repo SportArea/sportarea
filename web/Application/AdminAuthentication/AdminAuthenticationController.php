@@ -45,8 +45,8 @@ class AdminAuthenticationController extends \SportArea\Core\Controller
         if ($this->post) {
 
             // Validate the form
-            isset($this->post['email']) ? Validate::email($this->post['email'], 'E-mailul trebuie completat/valid.', 1) : Uim::addError('Adresa de e-mail trebuie completată.');
-            isset($this->post['password']) ? Validate::string($this->post['password'], 'Parola trebuie completată.', 1) : $this->flash->error('Parola trebuie completată.');
+            isset($this->post['email']) ? Validate::email($this->post['email'], 'E-mailul trebuie completat/valid.', 1) : Uim::addError('Adresa de e-mail trebuie completata.');
+            isset($this->post['password']) ? Validate::string($this->post['password'], 'Parola trebuie completata.', 1) : $this->flash->error('Parola trebuie completata.');
 
             // If we have no errors so far
             if (!Uim::haveErrors()) {
