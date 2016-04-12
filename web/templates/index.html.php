@@ -1,1 +1,1 @@
-Just a Template 
+Just a Template  
