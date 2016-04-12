@@ -32,7 +32,7 @@ class AdminAuthenticationController extends \SportArea\Core\Controller
     public function login()
     {
         $template = array(
-            'title' => 'Logare',
+            'title' => 'Logarea',
         );
 
         $usersModel = new UsersModel();
