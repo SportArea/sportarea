@@ -15,11 +15,9 @@
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo BASE_URL ?>/assets/vendor/metronic3.3.0/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo BASE_URL ?>/assets/vendor/metronic3.3.0/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo BASE_URL ?>/assets/vendor/metronic3.3.0/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo BASE_URL ?>/assets/vendor/metronic3.3.0/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo BASE_URL ?>/assets/vendor/metronic3.3.0/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN OVERWRITE THEME STYLE -->
@@ -28,16 +26,15 @@
     <?php echo $css; ?>
     <!-- END OVERWRITE THEME STYLE -->
 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
         var BASE_URL = '<?php echo BASE_URL?>';
     </script>
-
     <!-- START CONTROLLER JS -->
     <?php echo $js ?>
     <!-- END -->
-
 </head>
-<body>
+<body id="body">
     <?php echo $body; ?>
 </body>
 </html>

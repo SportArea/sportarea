@@ -1,8 +1,5 @@
 tools/vendor/*
 composer.lock
+deploy.ini
 git-deploy
-dev01.ini
-dev02.ini
-stage.ini
-prod.ini
-web/Application/ForgotPasswords/
+/web/nbproject/private/
